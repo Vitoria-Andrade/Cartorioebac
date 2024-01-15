@@ -122,15 +122,16 @@ int main()
     for(x=1; x=1;)
     {
         system("cls");
-        setlocale(LC_ALL, "Portuguese");
+        setlocale(LC_ALL, "Portuguese");//Definindo a linguagem
        
-        printf("### Cartório da EBAC ###\n\n");
+        printf("### Cartório da EBAC ###\n\n");//inicio do menu
         printf("Escolha a opção desejada no menu: \n\n");
         printf("\t1- Registrar nomes \n");
         printf("\t2- Consultar nomes \n");
         printf("\t3- Deletar nomes \n\n");
-        printf("Opção: ");
-        scanf("%d", &opcao);
+        printf("\t4- Sair do sistema \n\n");
+		printf("Opção: ");//fim do menu
+        scanf("%d", &opcao);//armazenando a escolha do usuario
         system("cls");//Responsavel por limpar a tela
         
         switch(opcao)//Inicio da seleçao do menu
@@ -146,8 +147,12 @@ int main()
 	        case 3:
 	        	deletar();
 	        	break;
-	    
-	    
+	        	
+	        case 4:
+	        	printf("Obrigado por utilizar o programa! \n");
+	        	return 0;
+	        	break;
+	        	
 		
 	        default:
 	        	printf("Esta opcao nao esta disponivel!\n");
